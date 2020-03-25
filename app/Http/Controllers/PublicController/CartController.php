@@ -255,6 +255,7 @@ class CartController extends Controller
         ];
         $validator      = Validator::make($request->all(), $rule );
         $errors         = [];
+        
 
         if ( $validator->fails() ) {
             $errors = $validator->errors()->messages();
